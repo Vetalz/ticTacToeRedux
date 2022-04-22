@@ -1,4 +1,3 @@
-export const setValues = (payload) => ({
-  type: 'SET_VALUE',
-  payload,
-});
+import {createAction} from "redux-actions";
+
+export const setValues = createAction('SET_VALUE');

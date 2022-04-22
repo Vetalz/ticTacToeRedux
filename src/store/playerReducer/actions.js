@@ -1,4 +1,3 @@
-export const setPlayer = (payload) => ({
-  type: 'SET_PLAYER',
-  payload,
-});
+import {createAction} from "redux-actions";
+
+export const setPlayer = createAction('SET_PLAYER');

@@ -1,14 +1,14 @@
+import {handleAction} from "redux-actions";
+import {setPlayer} from "./actions";
+
 const defaultState = {
   player: 'X',
 };
 
-const reducer = (state=defaultState, {type, payload}) => {
-  switch (type) {
-    case 'SET_PLAYER':
-      return {...state, player: state.player = payload};
-    default:
-      return state;
-  }
-}
+const reducer = handleAction(
+  setPlayer,
+  (state, {payload}) => ({...state, player: state.player = payload}),
+  defaultState
+)
 
 export default reducer;
